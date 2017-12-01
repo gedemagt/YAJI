@@ -1,20 +1,17 @@
 package com.yaji;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Shoe {
     private Date purchaseDate, lastDate;
     private double size;
-    private Integer gender;
+    private int gender;
     private String brand;
-    private DateFormat dateFormat = new SimpleDateFormat("d.M.y");
 
-    public Shoe(String purchase_date, String last_date, String shoe_brand, double shoe_size, Integer Gender) throws ParseException {
-        purchaseDate = dateFormat.parse(purchase_date);
-        lastDate = dateFormat.parse(last_date);
+
+    public Shoe(Date purchase_date, Date last_date, String shoe_brand, double shoe_size, int Gender) {
+        purchaseDate = purchase_date;
+        lastDate = last_date;
         size = shoe_size;
         gender = Gender;
         brand = shoe_brand;
@@ -24,7 +21,7 @@ public class Shoe {
     public Date getPurchaseDate(){return this.purchaseDate;  }
     public Date getLastDate(){return this.lastDate; }
     public double getSize(){ return this.size;  }
-    public Integer getGender() { return this.gender;    }
+    public int getGender() { return this.gender;    }
     public String getBrand() { return this.brand;  }
 
     public void setPurchaseDate(Date purchaseDate) {
@@ -39,7 +36,7 @@ public class Shoe {
         this.brand = brand;
     }
 
-    public void setGender(Integer gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

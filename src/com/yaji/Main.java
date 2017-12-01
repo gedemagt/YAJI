@@ -1,11 +1,8 @@
 package com.yaji;
 
-import java.text.ParseException;
-import java.util.Date;
-
 public class Main {
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args){
         System.out.println("Hello World, YAJI iz kulz!");
 
     }
