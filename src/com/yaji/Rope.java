@@ -9,13 +9,13 @@ public class Rope {
     private String brand;
 
 
-    public Rope(Date purchase_date, Date last_date, int rope_length, String rope_brand, int crit_falls){
+    public Rope(Date purchaseDate, Date lastDate, int ropeLength, String ropeBrand, int critFalls){
 
-        purchaseDate = purchase_date;
-        lastDate = last_date;
-        length = rope_length;
-        brand = rope_brand;
-        critFalls = crit_falls;
+        this.purchaseDate = purchaseDate;
+        this.lastDate = lastDate;
+        this.length = ropeLength;
+        this.brand = ropeBrand;
+        this.critFalls = critFalls;
     }
 
     public Date getPurchaseDate(){return this.purchaseDate;  }

@@ -9,12 +9,12 @@ public class Harness {
         private String brand;
 
 
-        public Harness(Date purchase_date, Date last_date, String harness_brand, double harness_size, int Gender){
-            purchaseDate = purchase_date;
-            lastDate = last_date;
-            size = harness_size;
-            gender = Gender;
-            brand = harness_brand;
+        public Harness(Date purchaseDate, Date lastDate, String harnessBrand, double harnessSize, int gender){
+            this.purchaseDate = purchaseDate;
+            this.lastDate = lastDate;
+            this.size = harnessSize;
+            this.gender = gender;
+            this.brand = harnessBrand;
         }
 
         public Date getPurchaseDate(){return this.purchaseDate;  }

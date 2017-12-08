@@ -9,12 +9,12 @@ public class Shoe {
     private String brand;
 
 
-    public Shoe(Date purchase_date, Date last_date, String shoe_brand, double shoe_size, int Gender) {
-        purchaseDate = purchase_date;
-        lastDate = last_date;
-        size = shoe_size;
-        gender = Gender;
-        brand = shoe_brand;
+    public Shoe(Date purchaseDate, Date lastDate, String shoeBrand, double shoeSize, int gender) {
+        this.purchaseDate = purchaseDate;
+        this.lastDate = lastDate;
+        this.size = shoeSize;
+        this.gender = gender;
+        this.brand = shoeBrand;
 
     }
 
