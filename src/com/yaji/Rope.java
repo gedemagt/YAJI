@@ -2,45 +2,27 @@ package com.yaji;
 
 import java.util.Date;
 
+public class Rope extends Item{
+    private int critFalls;
+    private String outputString="";
 
-public class Rope {
-    private Date purchaseDate, lastDate;
-    private int length, critFalls;
-    private String brand;
-
-
-    public Rope(Date purchaseDate, Date lastDate, int ropeLength, String ropeBrand, int critFalls){
-
-        this.purchaseDate = purchaseDate;
-        this.lastDate = lastDate;
-        this.length = ropeLength;
-        this.brand = ropeBrand;
+    public Rope(Date purchaseDate, Date lastDate, String brand,double size, int gender, int critFalls){
+        super(purchaseDate, lastDate, brand, size, 9, "rope");
         this.critFalls = critFalls;
     }
 
-    public Date getPurchaseDate(){return this.purchaseDate;  }
-    public Date getLastDate(){return this.lastDate; }
-    public int getLength(){ return this.length;  }
     public int getCritFalls() { return this.critFalls;    }
-    public String getBrand() { return this.brand;  }
+    public void setCritFalls(int critFalls) { this.critFalls = critFalls; }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+    @Override
+    public String toString() {
+        this.outputString += "itemType" + ":" + this.getItemType() + ";";
+        this.outputString += "purchaseDate" + ":" + this.getPurchaseDate() + ";";
+        this.outputString += "lastDate" + ":" + this.getLastDate() + ";";
+        this.outputString += "brand" + ":" + this.getBrand() + ";";
+        this.outputString += "size" + ":" + this.getBrand() + ";";
+        this.outputString += "critFalls" + ":" + this.getCritFalls() + ";";
 
-    public void setCritFalls(int critFalls) {
-        this.critFalls = critFalls;
-    }
-
-    public void setLastDate(Date lastDate) {
-        this.lastDate = lastDate;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public void setPurchaseDate(Date purchaseDate) {
-        this.purchaseDate = purchaseDate;
+        return outputString;
     }
 }
