@@ -1,15 +1,14 @@
 package com.yaji;
 import java.util.Date;
 
-
 public class Item {
     private  String itemType;
     private  Date purchaseDate, lastDate;
     private String brand;
     private  double size;
-    private  Integer gender = 9; // 0 for kvinde, 1 for mand
+    private GenderType gender;
 
-    public Item(Date purchaseDate, Date lastDate, String brand,double size, Integer gender, String itemType){
+    public Item(Date purchaseDate, Date lastDate, String brand,double size, GenderType gender, String itemType){
             this.purchaseDate = purchaseDate;
             this.lastDate = lastDate;
             this.size = size;
@@ -18,32 +17,28 @@ public class Item {
             this.itemType = itemType;
     }
 
-    public Date getPurchaseDate(){return this.purchaseDate;  }
-    public Date getLastDate(){return this.lastDate; }
-    public String getBrand() { return this.brand;  }
+    public Date getPurchaseDate(){return purchaseDate;  }
+    public Date getLastDate(){return lastDate; }
+    public String getBrand() { return brand;  }
     public double getSize() { return size;  }
-    public Integer getGender() {return gender;}
-
+    public GenderType getGender() {return gender;}
     public String getItemType() { return itemType;   }
 
-    public void setGender(Integer gender) { this.gender = gender;   }
-    public void setBrand(String brand) {
-            this.brand = brand;
-        }
+    public void setGender(GenderType gender) { this.gender = gender;   }
+    public void setBrand(String brand) {this.brand = brand;}
     public void setLastDate(Date lastDate) { this.lastDate = lastDate; }
     public void setPurchaseDate(Date purchaseDate) {this.purchaseDate = purchaseDate;}
     public void setSize(double size){ this.size = size;}
-
     public void setItemType(String itemType) { this.itemType = itemType;   }
 
     public String toString(){
         String outputString = "";
-        outputString += "itemType" + ":" + this.itemType + ";";
-        outputString += "purchaseDate" + ":" + this.purchaseDate.toString() + ";";
+        outputString += "itemType" + ":" + itemType + ";";
+        outputString += "purchaseDate" + ":" + purchaseDate.toString() + ";";
         outputString += "lastDate" + ":" + lastDate.toString() + ";";
         outputString += "brand" + ":" + brand + ";";
         outputString += "size" + ":" + Double.toString(size) + ";";
-        outputString += "gender" + ":" + Integer.toString(gender);
+        outputString += "gender" + ":" + gender.toString();
         return outputString;
     }
 

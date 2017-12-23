@@ -1,7 +1,7 @@
 package com.yaji;
-
-import javax.sound.midi.SysexMessage;
 import java.util.Date;
+
+import static com.yaji.GenderType.*;
 
 public class Main {
 
@@ -10,9 +10,9 @@ public class Main {
         Date date = new Date();
         date.setTime(System.currentTimeMillis());
 
-        Rope rope = new Rope(date, date, "evolve", 44.33, 9, 4);
-        Harness harness = new Harness(date, date, "Brian", 42.12, 1);
-        Shoe shoe = new Shoe(date, date, "Alti' miura", 41.5, 1);
+        Rope rope = new Rope(date, date, "evolve", 44.33, NON, 4);
+        Harness harness = new Harness(date, date, "Brian", 42.12, MAN);
+        Shoe shoe = new Shoe(date, date, "Alti' miura", 41.5, WOMAN);
 
         System.out.println(rope.toString());
         System.out.println(harness.toString());
